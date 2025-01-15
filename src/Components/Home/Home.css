@@ -1,0 +1,270 @@
+/* Estilos gerais */
+body.home-page {
+    overflow: hidden; /* Impede a rolagem da página */
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #00ffff;
+}
+
+a {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+/* Painel */
+#dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: rgba(15, 20, 30, 1);
+}
+
+header {
+    background: #1b2838;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.left-panel {
+    width: 100%;
+    background: #111922;
+    padding: 20px;
+    box-shadow: inset -2px 0 4px rgba(0, 0, 0, 0.8);
+    overflow-y: auto; /* Permite rolagem vertical */
+    max-height: calc(100vh - 80px); /* Altura máxima baseada na altura da viewport */
+    /* Estilo da barra de rolagem para Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #00ffff rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo da barra de rolagem para WebKit */
+.left-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.left-panel::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.left-panel::-webkit-scrollbar-thumb {
+    background: #00ffff;
+    border-radius: 5px;
+}
+
+.left-panel::-webkit-scrollbar-thumb:hover {
+    background: #008b8b;
+}
+
+.left-panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-panel li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.left-panel li img {
+    margin-right: 10px;
+}
+
+.left-panel li:hover {
+    background: rgba(0, 255, 255, 0.2);
+}
+
+.right-panel {
+    flex: 1;
+    padding: 20px;
+    background: #1e2933;
+}
+
+#client-details {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+#client-details img {
+    float: left;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+#client-details p {
+    margin: 5px 0;
+}
+
+/* Estilo do gráfico */
+#chart-container {
+    position: relative;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Filtros */
+.filter {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; /* Ajuste para coluna */
+}
+
+.filter select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-direction: column; /* Ajuste para coluna */
+}
+
+.filters select {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 14px;
+}
+
+.client-info, .process-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.client-info h3, .process-info h3 {
+    color: #00ffff;
+    margin-bottom: 10px;
+}
+
+.client-info p, .process-info p {
+    margin: 5px 0;
+}
+
+/* Estilo para os gráficos no topo */
+.top-charts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adiciona um espaço entre os gráficos */
+    margin-bottom: 20px;
+}
+
+.arc-chart-container,
+.pending-processes-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    width: 100%; /* Ajusta a largura para que ambos caibam lado a lado */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo */
+}
+
+.arc-chart-container canvas {
+    width: 150px !important; /* Define um tamanho fixo para o gráfico de pizza */
+    height: 150px !important;
+}
+
+.pending-processes-container h3 {
+    color: #00ffff;
+    margin-bottom: 10px;
+}
+
+.pending-processes-container p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ffff;
+}
+
+/* indicador de status */
+.status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.status-indicator.pendente {
+    background-color: #ffff00; /* amarelo */
+}
+
+.status-indicator.protocolado {
+    background-color: #1aa81a; /* verde */
+}
+
+.add-process-button {
+    background: #00ffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.add-process-button:hover {
+    background: #008b8b;
+}
+
+/* Estilos responsivos */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .left-panel {
+        width: 30%;
+    }
+
+    .top-charts {
+        flex-direction: row;
+    }
+
+    .arc-chart-container,
+    .pending-processes-container {
+        width: 48%;
+    }
+}

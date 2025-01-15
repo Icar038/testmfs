@@ -1,0 +1,116 @@
+.register-container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .register-container form {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .register-container form h1 {
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .register-container form div {
+    margin-bottom: 1rem;
+    position: relative;
+    width: 100%;
+  }
+  
+  .register-container form input[type="email"],
+  .register-container form input[type="password"] {
+    width: 90%;
+    padding: 0.75rem;
+    padding-left: 2.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #2b2b2b;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .register-container form input[type="email"]::placeholder,
+  .register-container form input[type="password"]::placeholder {
+    color: #aaa;
+  }
+  
+  .register-container .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #888;
+  }
+  
+  .register-container .recall-forget label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .register-container .recall-forget input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  .register-container .button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4a90e2;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .register-container .button:hover {
+    background-color: #357acb;
+  }
+  
+  .register-container .signup-link {
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .register-container .signup-link a {
+    color: #4a90e2;
+    text-decoration: none;
+  }
+  
+  .register-container .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Right-side container for the image */
+  .register-container .right-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e1e1e;
+    border-left: 1px solid #333;
+  }
+  
+  .register-container .right-container img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0px;
+  }
